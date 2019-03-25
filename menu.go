@@ -91,7 +91,7 @@ func NewMenu2(boundingBox gfx.Rect, parts ...TextBox) *Menu2 {
 }
 
 func (m *Menu2) render(screen *ebiten.Image) {
-	drawRect(screen, m.Rect, borderWidth, color.White)
+	// drawRect(screen, m.Rect, borderWidth, color.White)
 
 	offset := m.Min.AddXY(padding+borderWidth, padding+borderWidth)
 	for _, p := range m.parts {

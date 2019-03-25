@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"image/color"
 	"log"
 
@@ -91,6 +92,8 @@ func update(screen *ebiten.Image) error {
 
 	menu.hover(cursorPosition())
 	menu.render(screen)
+
+	ebitenutil.DebugPrintAt(screen, fmt.Sprintf("TPS: %0.2f", ebiten.CurrentTPS()), 20, int(screenHeight-50))
 	return nil
 }
 
